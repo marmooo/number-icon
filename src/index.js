@@ -76,7 +76,7 @@ export class TwoArcsCircle extends Circle {
   }
 
   toArray() {
-    const { cx, cy, rx, ry } = this;
+    const {cx, cy, rx, ry} = this;
     return [
       ["M", cx - rx, cy],
       ["A", rx, ry, 0, 1, 0, cx + rx, cy],
@@ -93,7 +93,7 @@ export class CubicBezierCircle extends Circle {
   }
 
   toArray() {
-    const { cx, cy, rx, ry } = this;
+    const {cx, cy, rx, ry} = this;
     const kappa = CubicBezierCircle.KAPPA;
     return [
       ["M", cx - rx, cy],
@@ -113,7 +113,7 @@ export class QuadBezierCircle extends Circle {
 
   toArray() {
     const ANGLE = 2 * Math.PI / this.segments;
-    const { cx, cy, rx, ry } = this;
+    const {cx, cy, rx, ry} = this;
     const calculateControlPoint = (theta) => {
       const ax = rx * Math.cos(theta);
       const ay = ry * Math.sin(theta);
@@ -229,7 +229,8 @@ export function lineToPath(node, createPathFunc) {
 }
 
 export function polylineToPath(node, createPathFunc) {
-  const points = node.getAttribute("points").trim().split(/[\s,]+/).map(Number);
+  const points = node.getAttribute("points")
+    .trim().replaceAll(",", " ").split(/\s+/).map(Number);
   const xy1 = points.slice(0, 2).join(" ");
   const xy2 = points.slice(2).join(" ");
   let d = `M${xy1}L${xy2}`;
@@ -365,7 +366,7 @@ function addNumbers(r) {
     switch (segment[0]) {
       case "H": {
         x = segment[1];
-        const rect = { left: x, top: y, right: x + r, bottom: y + r };
+        const rect = {left: x, top: y, right: x + r, bottom: y + r};
         const ny = replaceNumber(numbers, rect, r);
         numbers.push(rect);
         addNumber(x, ny, r, index);
@@ -374,7 +375,7 @@ function addNumbers(r) {
       }
       case "h": {
         x += segment[1];
-        const rect = { left: x, top: y, right: x + r, bottom: y + r };
+        const rect = {left: x, top: y, right: x + r, bottom: y + r};
         const ny = replaceNumber(numbers, rect, r);
         numbers.push(rect);
         addNumber(x, ny, r, index);
@@ -383,7 +384,7 @@ function addNumbers(r) {
       }
       case "V": {
         y = segment[1];
-        const rect = { left: x, top: y, right: x + r, bottom: y + r };
+        const rect = {left: x, top: y, right: x + r, bottom: y + r};
         const ny = replaceNumber(numbers, rect, r);
         numbers.push(rect);
         addNumber(x, ny, r, index);
@@ -392,7 +393,7 @@ function addNumbers(r) {
       }
       case "v": {
         y += segment[1];
-        const rect = { left: x, top: y, right: x + r, bottom: y + r };
+        const rect = {left: x, top: y, right: x + r, bottom: y + r};
         const ny = replaceNumber(numbers, rect, r);
         numbers.push(rect);
         addNumber(x, ny, r, index);
@@ -408,7 +409,7 @@ function addNumbers(r) {
       case "A": {
         x = segment.at(-2);
         y = segment.at(-1);
-        const rect = { left: x, top: y, right: x + r, bottom: y + r };
+        const rect = {left: x, top: y, right: x + r, bottom: y + r};
         const ny = replaceNumber(numbers, rect, r);
         numbers.push(rect);
         addNumber(x, ny, r, index);
@@ -424,7 +425,7 @@ function addNumbers(r) {
       case "a": {
         x += segment.at(-2);
         y += segment.at(-1);
-        const rect = { left: x, top: y, right: x + r, bottom: y + r };
+        const rect = {left: x, top: y, right: x + r, bottom: y + r};
         const ny = replaceNumber(numbers, rect, r);
         numbers.push(rect);
         addNumber(x, ny, r, index);
@@ -681,7 +682,7 @@ async function nextProblem() {
   if (!svg.getAttribute("fill")) svg.setAttribute("fill", "gray");
   resetCurrentColor(svg);
   workspaceGroup = removeSvgTagAttributes(svg);
-  shape2path(svg, createPath, { circleAlgorithm: "QuadBezier" });
+  shape2path(svg, createPath, {circleAlgorithm: "QuadBezier"});
   removeUseTags(svg);
   removeTransforms(svg);
   paths = [...svg.getElementsByTagName("path")];
