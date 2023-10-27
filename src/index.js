@@ -230,9 +230,9 @@ export function lineToPath(node, createPathFunc) {
 
 export function polylineToPath(node, createPathFunc) {
   const points = node.getAttribute("points")
-    .trim().split(/\s/).map((xy) => xy.split(/\s*,\s*/).map(Number));
-  const xy1 = points[0].join(" ");
-  const xy2 = points.slice(1).map((xy) => xy.join(" ")).join(" ");
+    .trim().replaceAll(",", " ").split(/\s+/).map(Number);
+  const xy1 = points.slice(0, 2).join(" ");
+  const xy2 = points.slice(2).join(" ");
   let d = `M${xy1}L${xy2}`;
   if (node.tagName.toLowerCase() === "polygon") d += "z";
   const path = createPathFunc(node);
@@ -252,7 +252,7 @@ function* traverse(element) {
   }
 }
 
-export function shapes2path(doc, createPathFunc, options = {}) {
+export function shape2path(doc, createPathFunc, options = {}) {
   for (const node of traverse(doc)) {
     if (!node.tagName) continue;
     switch (node.tagName.toLowerCase()) {
@@ -309,19 +309,20 @@ function addNumber(x, y, r, i) {
     }
     clickIndex += 1;
     const number = svg.querySelector("text");
-    if (segmentIndex != 1) number.previousElementSibling.remove();
+    if (segmentIndex != 1) workspaceGroup.lastElementChild.remove();
     text.style.cursor = "initial";
     text.setAttribute("fill-opacity", 0.5);
     text.onclick = null;
     const path = createPath(paths[pathIndex]);
+    resetCurrentColor(path); // fill:none; が狂う
     path.style.fill = "";
     path.style.stroke = "";
     const pathData = svgpath.from(currPath);
     pathData.segments = pathData.segments.slice(0, segmentIndex);
     const d = pathData.toString();
     path.setAttribute("d", d);
-    svg.appendChild(path);
-    svg.insertBefore(path, number);
+    workspaceGroup.appendChild(path);
+    svg.insertBefore(svg.firstElementChild, number);
     if (segmentIndex == currPath.segments.length) {
       const texts = [...svg.getElementsByTagName("text")];
       for (const text of texts) {
@@ -516,9 +517,6 @@ function setViewBox(svg, fontSize) {
 
 function hideIcon() {
   for (const path of paths) {
-    if (!path.getAttribute("fill")) {
-      path.setAttribute("fill", "gray");
-    }
     path.style.fill = "none";
     path.style.stroke = "none";
   }
@@ -542,6 +540,130 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
+const presentationAttributes = new Set([
+  "alignment-baseline",
+  "baseline-shift",
+  "clip",
+  "clip-path",
+  "clip-rule",
+  "color",
+  "color-interpolation",
+  "color-interpolation-filters",
+  "color-profile",
+  "color-rendering",
+  "cursor",
+  // "d",
+  "direction",
+  "display",
+  "dominant-baseline",
+  "enable-background",
+  "fill",
+  "fill-opacity",
+  "fill-rule",
+  "filter",
+  "flood-color",
+  "flood-opacity",
+  "font-family",
+  "font-size",
+  "font-size-adjust",
+  "font-stretch",
+  "font-style",
+  "font-variant",
+  "font-weight",
+  "glyph-orientation-horizontal",
+  "glyph-orientation-vertical",
+  "image-rendering",
+  "kerning",
+  "letter-spacing",
+  "lighting-color",
+  "marker-end",
+  "marker-mid",
+  "marker-start",
+  "mask",
+  "opacity",
+  "overflow",
+  "pointer-events",
+  "shape-rendering",
+  "solid-color",
+  "solid-opacity",
+  "stop-color",
+  "stop-opacity",
+  "stroke",
+  "stroke-dasharray",
+  "stroke-dashoffset",
+  "stroke-linecap",
+  "stroke-linejoin",
+  "stroke-miterlimit",
+  "stroke-opacity",
+  "stroke-width",
+  "text-anchor",
+  "text-decoration",
+  "text-rendering",
+  "transform",
+  "unicode-bidi",
+  "vector-effect",
+  "visibility",
+  "word-spacing",
+  "writing-mode",
+]);
+
+function removeSvgTagAttributes(svg) {
+  const candidates = [];
+  [...svg.attributes].forEach((attribute) => {
+    if (presentationAttributes.has(attribute.name)) {
+      candidates.push(attribute);
+      svg.removeAttribute(attribute.name);
+    }
+  });
+  if (candidates.length > 0) {
+    const g = document.createElementNS(svgNamespace, "g");
+    for (const node of svg.children) {
+      g.appendChild(node);
+    }
+    svg.appendChild(g);
+    candidates.forEach((attribute) => {
+      g.setAttribute(attribute.name, attribute.value);
+    });
+    return g;
+  } else {
+    return svg;
+  }
+}
+
+function fixIconCode(svg) {
+  const courseObj = document.getElementById("course");
+  const course = courseObj.options[courseObj.selectedIndex].value;
+  if (course == "Solar-icon-set") {
+    for (const node of svg.querySelectorAll("[fill=black]")) {
+      node.setAttribute("fill", "gray");
+    }
+    for (const node of svg.querySelectorAll("[stroke=black]")) {
+      node.setAttribute("stroke", "gray");
+    }
+  }
+}
+
+function computeAttribute(node, attributeName) {
+  let attributeValue;
+  while (!attributeValue && node && node.tagName) {
+    attributeValue = node.getAttribute(attributeName);
+    node = node.parentNode;
+  }
+  return attributeValue;
+}
+
+function resetCurrentColor(node) {
+  const fill = computeAttribute(node, "fill");
+  const stroke = computeAttribute(node, "stroke");
+  if (fill && fill.toLowerCase() == "currentcolor") {
+    node.setAttribute("fill", "gray");
+  }
+  if (stroke && stroke.toLowerCase() == "currentcolor") {
+    node.setAttribute("stroke", "gray");
+  }
+}
+
 async function nextProblem() {
   clickIndex = 0;
   segmentIndex = 1;
@@ -556,7 +678,11 @@ async function nextProblem() {
   const icon = await fetchIcon(url);
   svg = icon.documentElement;
 
-  shapes2path(svg, createPath, { circleAlgorithm: "QuadBezier" });
+  fixIconCode(svg);
+  if (!svg.getAttribute("fill")) svg.setAttribute("fill", "gray");
+  resetCurrentColor(svg);
+  workspaceGroup = removeSvgTagAttributes(svg);
+  shape2path(svg, createPath, { circleAlgorithm: "QuadBezier" });
   removeUseTags(svg);
   removeTransforms(svg);
   paths = [...svg.getElementsByTagName("path")];
@@ -585,6 +711,7 @@ let svg;
 let paths;
 let fontSize;
 let currPath;
+let workspaceGroup;
 let iconList = [];
 
 nextProblem();
