@@ -229,8 +229,7 @@ export function lineToPath(node, createPathFunc) {
 }
 
 export function polylineToPath(node, createPathFunc) {
-  const points = node.getAttribute("points")
-    .trim().replaceAll(",", " ").split(/\s+/).map(Number);
+  const points = node.getAttribute("points").trim().split(/[\s,]+/).map(Number);
   const xy1 = points.slice(0, 2).join(" ");
   const xy2 = points.slice(2).join(" ");
   let d = `M${xy1}L${xy2}`;
