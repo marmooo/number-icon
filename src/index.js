@@ -664,6 +664,18 @@ function resetCurrentColor(node) {
   }
 }
 
+function styleAttributeToAttributes(svg) {
+  [...svg.querySelectorAll("[style]")].forEach((node) => {
+    node.getAttribute("style").split(";").forEach((style) => {
+      const [property, value] = style.split(":").map((str) => str.trim());
+      if (presentationAttributes.has(property)) {
+        node.setAttribute(property, value);
+        node.style.removeProperty(property);
+      }
+    });
+  });
+}
+
 async function nextProblem() {
   clickIndex = 0;
   segmentIndex = 1;
@@ -677,8 +689,10 @@ async function nextProblem() {
   const url = `/icons/${course}/${filePath}`;
   const icon = await fetchIcon(url);
   svg = icon.documentElement;
+  svg.querySelector("path").style.setProperty("fill", "red");
 
   fixIconCode(svg);
+  styleAttributeToAttributes(svg);
   if (!svg.getAttribute("fill")) svg.setAttribute("fill", "gray");
   resetCurrentColor(svg);
   workspaceGroup = removeSvgTagAttributes(svg);
