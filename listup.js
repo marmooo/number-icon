@@ -3,7 +3,10 @@ import { expandGlobSync } from "https://deno.land/std/fs/expand_glob.ts";
 const dirs = [
   "material-symbols",
   "material-design-icons",
+  "phosphor-icons",
   "tabler-icons",
+  "bootstrap-icons",
+  "RemixIcon",
   "Solar-icon-set",
   "iconoir",
   "majesticons",
