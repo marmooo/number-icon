@@ -13,20 +13,20 @@
     <meta property="og:image" content="https://marmooo.github.io/number-icon/favicon/apple-touch-icon.png">
     <meta name="twitter:card" content="summary">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2179JXDYY"></script> -->
-    <!-- <script> -->
-    <!--   window.dataLayer = window.dataLayer || []; -->
-    <!--   function gtag(){dataLayer.push(arguments);} -->
-    <!--   gtag('js', new Date()); -->
-    <!--   gtag('config', 'G-F2179JXDYY'); -->
-    <!-- </script> -->
-    <!-- <script> -->
-    <!--   if ('serviceWorker' in navigator) { -->
-    <!--     window.addEventListener('load', function() { -->
-    <!--       navigator.serviceWorker.register('/number-icon/sw.js'); -->
-    <!--     }); -->
-    <!--   } -->
-    <!-- </script> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2179JXDYY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2179JXDYY');
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/number-icon/sw.js');
+        });
+      }
+    </script>
     <link rel="icon" type="image/png" href="/number-icon/favicon/favicon.png">
     <link rel="icon" type="image/svg+xml" href="/number-icon/favicon/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/number-icon/favicon/apple-touch-icon.png">
@@ -56,7 +56,7 @@
             </select>
           </div>
           <div class="navbar-nav">
-            <button id="startButton" class="btn btn-sm btn-primary" type="button">START</button>
+            <button id="startButton" class="btn btn-sm btn-primary" type="button">スタート</button>
             <select title="course" id="course" class="form-select form-select-sm w-auto ms-1">
               <optgroup label="NORMAL">
                 <option value="material-symbols">Material Symbols</option>

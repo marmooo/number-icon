@@ -3,30 +3,30 @@
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A game that creates icons by connecting numbers.">
+    <meta name="description" content="数字をつなげてアイコンを書く点つなぎゲームです。">
     <title>Number Icon</title>
     <meta property="og:title" content="Number Icon">
     <meta property="og:site_name" content="Number Icon">
-    <meta property="og:description" content="A game that creates icons by connecting numbers.">
+    <meta property="og:description" content="数字をつなげてアイコンを書く点つなぎゲームです。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://marmooo.github.io/number-icon/">
     <meta property="og:image" content="https://marmooo.github.io/number-icon/favicon/apple-touch-icon.png">
     <meta name="twitter:card" content="summary">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2179JXDYY"></script> -->
-    <!-- <script> -->
-    <!--   window.dataLayer = window.dataLayer || []; -->
-    <!--   function gtag(){dataLayer.push(arguments);} -->
-    <!--   gtag('js', new Date()); -->
-    <!--   gtag('config', 'G-F2179JXDYY'); -->
-    <!-- </script> -->
-    <!-- <script> -->
-    <!--   if ('serviceWorker' in navigator) { -->
-    <!--     window.addEventListener('load', function() { -->
-    <!--       navigator.serviceWorker.register('/number-icon/sw.js'); -->
-    <!--     }); -->
-    <!--   } -->
-    <!-- </script> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2179JXDYY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2179JXDYY');
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/number-icon/sw.js');
+        });
+      }
+    </script>
     <link rel="icon" type="image/png" href="/number-icon/favicon/favicon.png">
     <link rel="icon" type="image/svg+xml" href="/number-icon/favicon/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/number-icon/favicon/apple-touch-icon.png">
@@ -51,13 +51,13 @@
               Number Icon
             </a>
             <select title="language" id="lang" class="form-select form-select-sm ms-1">
-              <option value="ja">日本語</option>
-              <option value="en" selected>English</option>
+              <option value="ja" selected>日本語</option>
+              <option value="en">English</option>
             </select>
           </div>
           <div class="navbar-nav">
-            <button id="startButton" class="btn btn-sm btn-primary" type="button">START</button>
-            <select title="course" id="course" class="form-select form-select-sm w-auto ms-1">
+            <button id="startButton" class="btn btn-sm btn-primary" type="button">スタート</button>
+            <select title="コース" id="course" class="form-select form-select-sm w-auto ms-1">
               <optgroup label="NORMAL">
                 <option value="material-symbols">Material Symbols</option>
                 <option value="material-design-icons">Material Design Icons</option>
@@ -74,17 +74,24 @@
                 <option value="line-md">Material Line Icons</option>
               </optgroup>
             </select>
-            <button title="toggle dark-mode" id="toggleDarkMode" class="fs-4 btn p-0 ms-1" type="button">🌓</button>
+            <button title="ダークモード切替" id="toggleDarkMode" class="fs-4 btn p-0 ms-1" type="button">🌓</button>
           </div>
         </div>
       </nav>
     </header>
     <main class="container">
       <noscript>
-        <div class="alert alert-warning">Please turn on Javascript.</div>
+        <div class="alert alert-warning">JavaScript を ON にしてください</div>
       </noscript>
+      <div id="noTTS" class="alert alert-warning d-none">
+        <p>お使いのブラウザは音声読み上げに対応していません。
+        Firefox for Linux は発話モジュールをインストールしてください。例:
+        </p>
+        <pre><code>sudo apt install speech-dispatcher
+sudo apt install festival speech-dispatcher-festival</code></pre>
+      </div>
       <div id="infoPanel">
-        <p>A game that creates icons by connecting numbers.
+        <p>数字をつなげてアイコンを書く点つなぎゲームです。
         </p>
       </div>
       <div id="problem" class="d-flex justify-content-center position-relative">

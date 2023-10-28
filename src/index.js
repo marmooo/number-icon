@@ -2,10 +2,10 @@ import svgpath from "https://cdn.jsdelivr.net/npm/svgpath@2.6.0/+esm";
 
 const audioContext = new AudioContext();
 const audioBufferCache = {};
-loadAudio("error", "mp3/boyon1.mp3");
-loadAudio("correct1", "mp3/pa1.mp3");
-loadAudio("correct2", "mp3/papa1.mp3");
-loadAudio("correctAll", "mp3/levelup1.mp3");
+loadAudio("error", "/number-icon/mp3/boyon1.mp3");
+loadAudio("correct1", "/number-icon/mp3/pa1.mp3");
+loadAudio("correct2", "/number-icon/mp3/papa1.mp3");
+loadAudio("correctAll", "/number-icon/mp3/levelup1.mp3");
 loadConfig();
 
 function loadConfig() {
@@ -51,6 +51,12 @@ async function loadAudio(name, url) {
 
 function unlockAudio() {
   audioContext.resume();
+}
+
+function changeLang() {
+  const langObj = document.getElementById("lang");
+  const lang = langObj.options[langObj.selectedIndex].value;
+  location.href = `/number-icon/${lang}/`;
 }
 
 export class Circle {
@@ -730,6 +736,7 @@ let iconList = [];
 nextProblem();
 
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
+document.getElementById("lang").onchange = changeLang;
 document.getElementById("startButton").onclick = nextProblem;
 document.getElementById("course").onclick = changeCourse;
 document.addEventListener("click", unlockAudio, {
