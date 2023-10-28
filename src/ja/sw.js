@@ -1,6 +1,7 @@
 const CACHE_NAME = "2023-11-01 00:00";
 const urlsToCache = [
   "/number-icon/",
+  "/number-icon/ja/",
   "/number-icon/index.js",
   "/number-icon/mp3/boyon1.mp3",
   "/number-icon/mp3/pa1.mp3",
