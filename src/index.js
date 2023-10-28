@@ -689,7 +689,6 @@ async function nextProblem() {
   const url = `/icons/${course}/${filePath}`;
   const icon = await fetchIcon(url);
   svg = icon.documentElement;
-  svg.querySelector("path").style.setProperty("fill", "red");
 
   fixIconCode(svg);
   styleAttributeToAttributes(svg);
