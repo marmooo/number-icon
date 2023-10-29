@@ -314,22 +314,23 @@ function addNumber(x, y, r, i) {
       return;
     }
     clickIndex += 1;
-    const number = svg.querySelector("text");
-    if (segmentIndex != 1) workspaceGroup.lastElementChild.remove();
+    const currPath = paths[pathIndex];
+    if (segmentIndex != 1) currPathnextElementSibling.remove();
     text.style.cursor = "initial";
     text.setAttribute("fill-opacity", 0.5);
     text.onclick = null;
+
     const path = createPath(paths[pathIndex]);
-    resetCurrentColor(path); // fill:none; が狂う
+    resetCurrentColor(path);
     path.style.fill = "";
     path.style.stroke = "";
-    const pathData = svgpath.from(currPath);
+    const pathData = svgpath.from(currPathData);
     pathData.segments = pathData.segments.slice(0, segmentIndex);
     const d = pathData.toString();
     path.setAttribute("d", d);
-    workspaceGroup.appendChild(path);
-    svg.insertBefore(svg.firstElementChild, number);
-    if (segmentIndex == currPath.segments.length) {
+    currPath.after(path);
+
+    if (segmentIndex == currPathData.segments.length) {
       const texts = [...svg.getElementsByTagName("text")];
       for (const text of texts) {
         text.remove();
@@ -339,7 +340,7 @@ function addNumber(x, y, r, i) {
       } else {
         playAudio("correct2");
         pathIndex += 1;
-        currPath = addNumbers(fontSize);
+        currPathData = addNumbers(fontSize);
         segmentIndex = 1;
       }
     } else {
@@ -729,7 +730,7 @@ async function nextProblem() {
   hideIcon(svg);
   fontSize = getFontSize(svg);
   setViewBox(svg, fontSize);
-  currPath = addNumbers(fontSize);
+  currPathData = addNumbers(fontSize);
 
   svg.style.width = "100%";
   svg.style.height = "100%";
@@ -750,7 +751,7 @@ let pathIndex = 0;
 let svg;
 let paths;
 let fontSize;
-let currPath;
+let currPathData;
 let workspaceGroup;
 let iconList = [];
 
