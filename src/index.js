@@ -315,7 +315,7 @@ function addNumber(x, y, r, i) {
     }
     clickIndex += 1;
     const currPath = paths[pathIndex];
-    if (segmentIndex != 1) currPathnextElementSibling.remove();
+    if (segmentIndex != 1) currPath.nextElementSibling.remove();
     text.style.cursor = "initial";
     text.setAttribute("fill-opacity", 0.5);
     text.onclick = null;
