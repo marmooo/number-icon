@@ -651,7 +651,9 @@ function removeSvgTagAttributes(svg) {
     candidates.forEach((attribute) => {
       g.setAttribute(attribute.name, attribute.value);
     });
-    g.replaceChildren(svg.children);
+    [...svg.children].forEach((node) => {
+      g.appendChild(node);
+    });
     svg.appendChild(g);
     return g;
   } else {
