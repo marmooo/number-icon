@@ -306,6 +306,7 @@ function addNumber(x, y, r, i) {
   text.setAttribute("r", r);
   text.setAttribute("text-anchor", "middle");
   text.setAttribute("font-size", r);
+  text.setAttribute("fill", "currentColor");
   text.style.cursor = "pointer";
   text.textContent = i;
   text.onclick = () => {
