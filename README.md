@@ -1,6 +1,6 @@
 # Number Icon
 
-[A game that creates icons by connecting numbers](https://marmooo.github.io/number-icon/).
+[An icon drawing game to connect numbers](https://marmooo.github.io/number-icon/).
 
 ## Build
 
