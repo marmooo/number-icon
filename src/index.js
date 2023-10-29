@@ -647,13 +647,11 @@ function removeSvgTagAttributes(svg) {
   });
   if (candidates.length > 0) {
     const g = document.createElementNS(svgNamespace, "g");
-    for (const node of svg.children) {
-      g.appendChild(node);
-    }
-    svg.appendChild(g);
     candidates.forEach((attribute) => {
       g.setAttribute(attribute.name, attribute.value);
     });
+    g.replaceChildren(svg.children);
+    svg.appendChild(g);
     return g;
   } else {
     return svg;
