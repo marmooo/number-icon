@@ -656,9 +656,6 @@ function removeSvgTagAttributes(svg) {
       g.appendChild(node);
     });
     svg.appendChild(g);
-    return g;
-  } else {
-    return svg;
   }
 }
 
@@ -725,7 +722,7 @@ async function nextProblem() {
   styleAttributeToAttributes(svg);
   if (!svg.getAttribute("fill")) svg.setAttribute("fill", "gray");
   resetCurrentColor(svg);
-  workspaceGroup = removeSvgTagAttributes(svg);
+  removeSvgTagAttributes(svg);
   shape2path(svg, createPath, { circleAlgorithm: "QuadBezier" });
   removeUseTags(svg);
   removeTransforms(svg);
@@ -755,7 +752,6 @@ let svg;
 let paths;
 let fontSize;
 let currPathData;
-let workspaceGroup;
 let iconList = [];
 
 nextProblem();
