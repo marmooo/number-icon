@@ -492,13 +492,35 @@ function removeUseTags(svg) {
   }
 }
 
+// https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+function lengthToPixel(str) {
+  const x = parseFloat(str);
+  switch (str.slice(0, -2)) {
+    case "cm":
+      return x / 96 * 2.54;
+    case "mm":
+      return x / 96 * 254;
+    case "in":
+      return x / 96;
+    case "pc":
+      return x * 16;
+    case "pt":
+      return x / 96 * 72;
+    case "px":
+      return x;
+    default:
+      return x;
+  }
+}
+
 function getFontSize(svg) {
   const viewBox = svg.getAttribute("viewBox");
   if (viewBox) {
     const width = Number(viewBox.split(" ")[2]);
     return width / 40;
   } else {
-    const width = Number(svg.getAttribute("width"));
+    const width = lengthToPixel(svg.getAttribute("width"));
+    console.log(svg.getAttribute("width"), width);
     return width / 40;
   }
 }
@@ -516,8 +538,8 @@ function setViewBox(svg, fontSize) {
   } else {
     const left = -margin;
     const top = -margin;
-    const width = Number(svg.getAttribute("width")) + margin * 2;
-    const height = Number(svg.getAttribute("height")) + margin * 2;
+    const width = lengthToPixel(svg.getAttribute("width")) + margin * 2;
+    const height = lengthToPixel(svg.getAttribute("height")) + margin * 2;
     svg.setAttribute("viewBox", `${left} ${top} ${width} ${height}`);
   }
 }
