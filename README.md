@@ -32,5 +32,3 @@ bash build.sh
   [MIT](https://github.com/halfmage/majesticons/blob/main/LICENSE)
 - [Lucide](https://github.com/lucide-icons/lucide) licensed under the
   [ISC](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
-- [Material Line Icons](https://github.com/cyberalien/line-md) licensed under
-  the [MIT](https://github.com/cyberalien/line-md/blob/master/license.txt)
