@@ -714,7 +714,7 @@ async function nextProblem() {
     iconList = await fetchIconList(course);
   }
   const filePath = iconList[getRandomInt(0, iconList.length)];
-  const url = `/icons/${course}/${filePath}`;
+  const url = `/svg/${course}/${filePath}`;
   const icon = await fetchIcon(url);
   svg = icon.documentElement;
 
