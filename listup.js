@@ -13,7 +13,7 @@ const dirs = [
   "lucide",
   "line-md",
 ];
-const baseDir = Deno.realPathSync("icons");
+const baseDir = Deno.realPathSync("svg");
 for (const dir of dirs) {
   const paths = [];
   const glob = expandGlobSync(`${baseDir}/${dir}/**/*.svg`, { globstar: true });
