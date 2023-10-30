@@ -1,5 +1,6 @@
 import svgpath from "https://cdn.jsdelivr.net/npm/svgpath@2.6.0/+esm";
 
+const courseNode = document.getElementById("course");
 const audioContext = new AudioContext();
 const audioBufferCache = {};
 loadAudio("error", "/number-icon/mp3/boyon1.mp3");
@@ -660,8 +661,7 @@ function removeSvgTagAttributes(svg) {
 }
 
 function fixIconCode(svg) {
-  const courseObj = document.getElementById("course");
-  const course = courseObj.options[courseObj.selectedIndex].value;
+  const course = courseNode.options[courseNode.selectedIndex].value;
   if (course == "Solar-icon-set") {
     for (const node of svg.querySelectorAll("[fill=black]")) {
       node.setAttribute("fill", "gray");
@@ -708,8 +708,8 @@ async function nextProblem() {
   clickIndex = 0;
   segmentIndex = 1;
   pathIndex = 0;
-  const courseObj = document.getElementById("course");
-  const course = courseObj.options[courseObj.selectedIndex].value;
+  const courseNode = document.getElementById("course");
+  const course = courseNode.options[courseNode.selectedIndex].value;
   if (iconList.length == 0) {
     iconList = await fetchIconList(course);
   }
@@ -738,9 +738,27 @@ async function nextProblem() {
 }
 
 async function changeCourse() {
-  const courseObj = document.getElementById("course");
-  const course = courseObj.options[courseObj.selectedIndex].value;
+  const course = courseNode.options[courseNode.selectedIndex].value;
   iconList = await fetchIconList(course);
+  selectAttribution(courseNode.selectedIndex);
+  nextProblem();
+}
+
+function selectRandomCourse() {
+  const index = getRandomInt(0, courseNode.options.length);
+  courseNode.options[index].selected = true;
+  selectAttribution(index);
+}
+
+function selectAttribution(index) {
+  const divs = [...document.getElementById("attribution").children];
+  divs.forEach((div, i) => {
+    if (i == index) {
+      div.classList.remove("d-none");
+    } else {
+      div.classList.add("d-none");
+    }
+  });
 }
 
 const svgNamespace = "http://www.w3.org/2000/svg";
@@ -754,12 +772,13 @@ let fontSize;
 let currPathData;
 let iconList = [];
 
+selectRandomCourse();
 nextProblem();
 
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("lang").onchange = changeLang;
 document.getElementById("startButton").onclick = nextProblem;
-document.getElementById("course").onclick = changeCourse;
+courseNode.onclick = changeCourse;
 document.addEventListener("click", unlockAudio, {
   once: true,
   useCapture: true,
