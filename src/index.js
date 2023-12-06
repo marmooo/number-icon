@@ -304,7 +304,6 @@ function addNumber(x, y, r, i) {
   const text = document.createElementNS(svgNamespace, "text");
   text.setAttribute("x", x);
   text.setAttribute("y", y);
-  text.setAttribute("r", r);
   text.setAttribute("text-anchor", "middle");
   text.setAttribute("font-size", r);
   text.setAttribute("fill", "currentColor");
@@ -557,7 +556,6 @@ function getFontSize(svg) {
     return width / 40;
   } else {
     const width = lengthToPixel(svg.getAttribute("width"));
-    console.log(svg.getAttribute("width"), width);
     return width / 40;
   }
 }
