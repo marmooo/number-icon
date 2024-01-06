@@ -383,6 +383,7 @@ axis-x.svg
 axis-y.svg
 baby-bottle.svg
 baby-carriage.svg
+background.svg
 backhoe.svg
 backpack-off.svg
 backpack.svg
@@ -579,6 +580,9 @@ books-off.svg
 books.svg
 border-all.svg
 border-bottom.svg
+border-corner-pill.svg
+border-corner-rounded.svg
+border-corner-square.svg
 border-corners.svg
 border-horizontal.svg
 border-inner.svg
@@ -668,6 +672,7 @@ brand-ansible.svg
 brand-ao3.svg
 brand-appgallery.svg
 brand-apple-arcade.svg
+brand-apple-filled.svg
 brand-apple-podcast.svg
 brand-apple.svg
 brand-appstore.svg
@@ -689,6 +694,7 @@ brand-bitbucket.svg
 brand-blackberry.svg
 brand-blender.svg
 brand-blogger.svg
+brand-bluesky.svg
 brand-booking.svg
 brand-bootstrap.svg
 brand-bulma.svg
@@ -782,6 +788,7 @@ brand-golang.svg
 brand-google-analytics.svg
 brand-google-big-query.svg
 brand-google-drive.svg
+brand-google-filled.svg
 brand-google-fit.svg
 brand-google-home.svg
 brand-google-maps.svg
@@ -807,6 +814,7 @@ brand-intercom.svg
 brand-itch.svg
 brand-javascript.svg
 brand-juejin.svg
+brand-kako-talk.svg
 brand-kbin.svg
 brand-kick.svg
 brand-kickstarter.svg
@@ -819,6 +827,7 @@ brand-line.svg
 brand-linkedin.svg
 brand-linktree.svg
 brand-linqpad.svg
+brand-livewire.svg
 brand-loom.svg
 brand-mailgun.svg
 brand-mantine.svg
@@ -863,6 +872,7 @@ brand-openvpn.svg
 brand-opera.svg
 brand-pagekit.svg
 brand-parsinta.svg
+brand-patreon-filled.svg
 brand-patreon.svg
 brand-paypal-filled.svg
 brand-paypal.svg
@@ -873,9 +883,11 @@ brand-php.svg
 brand-picsart.svg
 brand-pinterest.svg
 brand-planetscale.svg
+brand-pnpm.svg
 brand-pocket.svg
 brand-polymer.svg
 brand-powershell.svg
+brand-printables.svg
 brand-prisma.svg
 brand-producthunt.svg
 brand-pushbullet.svg
@@ -914,6 +926,7 @@ brand-spotify.svg
 brand-stackoverflow.svg
 brand-stackshare.svg
 brand-steam.svg
+brand-stocktwits.svg
 brand-storj.svg
 brand-storybook.svg
 brand-storytel.svg
@@ -936,6 +949,7 @@ brand-ted.svg
 brand-telegram.svg
 brand-terraform.svg
 brand-tether.svg
+brand-thingiverse.svg
 brand-threads.svg
 brand-threejs.svg
 brand-tidal.svg
@@ -992,6 +1006,7 @@ brand-xdeep.svg
 brand-xing.svg
 brand-yahoo.svg
 brand-yandex.svg
+brand-yarn.svg
 brand-yatse.svg
 brand-ycombinator.svg
 brand-youtube-filled.svg
@@ -1007,6 +1022,7 @@ brand-zwift.svg
 bread-off.svg
 bread.svg
 briefcase-2.svg
+briefcase-filled.svg
 briefcase-off.svg
 briefcase.svg
 brightness-2.svg
@@ -1029,6 +1045,7 @@ brush.svg
 bucket-droplet.svg
 bucket-off.svg
 bucket.svg
+bug-filled.svg
 bug-off.svg
 bug.svg
 building-arch.svg
@@ -1079,9 +1096,11 @@ calculator.svg
 calendar-bolt.svg
 calendar-cancel.svg
 calendar-check.svg
+calendar-clock.svg
 calendar-code.svg
 calendar-cog.svg
 calendar-dollar.svg
+calendar-dot.svg
 calendar-down.svg
 calendar-due.svg
 calendar-event.svg
@@ -1089,18 +1108,23 @@ calendar-exclamation.svg
 calendar-filled.svg
 calendar-heart.svg
 calendar-minus.svg
+calendar-month.svg
 calendar-off.svg
 calendar-pause.svg
 calendar-pin.svg
 calendar-plus.svg
 calendar-question.svg
 calendar-repeat.svg
+calendar-sad.svg
 calendar-search.svg
 calendar-share.svg
+calendar-smile.svg
 calendar-star.svg
 calendar-stats.svg
 calendar-time.svg
 calendar-up.svg
+calendar-user.svg
+calendar-week.svg
 calendar-x.svg
 calendar.svg
 camera-bolt.svg
@@ -1158,10 +1182,12 @@ cards.svg
 caret-down-filled.svg
 caret-down.svg
 caret-left-filled.svg
+caret-left-right-filled.svg
 caret-left-right.svg
 caret-left.svg
 caret-right-filled.svg
 caret-right.svg
+caret-up-down-filled.svg
 caret-up-down.svg
 caret-up-filled.svg
 caret-up.svg
@@ -1180,6 +1206,8 @@ cast.svg
 cat.svg
 category-2.svg
 category-filled.svg
+category-minus.svg
+category-plus.svg
 category.svg
 ce-off.svg
 ce.svg
@@ -1220,7 +1248,9 @@ chart-donut-filled.svg
 chart-donut.svg
 chart-dots-2.svg
 chart-dots-3.svg
+chart-dots-filled.svg
 chart-dots.svg
+chart-grid-dots-filled.svg
 chart-grid-dots.svg
 chart-histogram.svg
 chart-infographic.svg
@@ -1280,6 +1310,7 @@ chevrons-up-left.svg
 chevrons-up-right.svg
 chevrons-up.svg
 chisel.svg
+christmas-ball.svg
 christmas-tree-off.svg
 christmas-tree.svg
 circle-0-filled.svg
@@ -1332,6 +1363,7 @@ circle-dashed-number-6.svg
 circle-dashed-number-7.svg
 circle-dashed-number-8.svg
 circle-dashed-number-9.svg
+circle-dashed-percentage.svg
 circle-dashed-x.svg
 circle-dashed.svg
 circle-dot-filled.svg
@@ -1382,6 +1414,7 @@ circle-number-7.svg
 circle-number-8.svg
 circle-number-9.svg
 circle-off.svg
+circle-percentage.svg
 circle-plus-2.svg
 circle-plus.svg
 circle-rectangle-off.svg
@@ -1519,13 +1552,23 @@ code.svg
 coffee-off.svg
 coffee.svg
 coffin.svg
+coin-bitcoin-filled.svg
 coin-bitcoin.svg
+coin-euro-filled.svg
 coin-euro.svg
+coin-filled.svg
+coin-monero-filled.svg
 coin-monero.svg
 coin-off.svg
+coin-pound-filled.svg
 coin-pound.svg
+coin-rupee-filled.svg
 coin-rupee.svg
+coin-taka-filled.svg
+coin-taka.svg
+coin-yen-filled.svg
 coin-yen.svg
+coin-yuan-filled.svg
 coin-yuan.svg
 coin.svg
 coins.svg
@@ -1545,6 +1588,7 @@ columns.svg
 comet.svg
 command-off.svg
 command.svg
+compass-filled.svg
 compass-off.svg
 compass.svg
 components-off.svg
@@ -1566,7 +1610,11 @@ cooker.svg
 cookie-man.svg
 cookie-off.svg
 cookie.svg
+copy-check.svg
+copy-minus.svg
 copy-off.svg
+copy-plus.svg
+copy-x.svg
 copy.svg
 copyleft-filled.svg
 copyleft-off.svg
@@ -1602,9 +1650,19 @@ creative-commons-off.svg
 creative-commons-sa.svg
 creative-commons-zero.svg
 creative-commons.svg
+credit-card-filled.svg
 credit-card-off.svg
+credit-card-pay.svg
+credit-card-refund.svg
 credit-card.svg
 cricket.svg
+crop-1-1.svg
+crop-16-9.svg
+crop-3-2.svg
+crop-5-4.svg
+crop-7-5.svg
+crop-landscape.svg
+crop-portrait.svg
 crop.svg
 cross-filled.svg
 cross-off.svg
@@ -1686,6 +1744,7 @@ currency-taka.svg
 currency-tenge.svg
 currency-tugrik.svg
 currency-won.svg
+currency-xrp.svg
 currency-yen-off.svg
 currency-yen.svg
 currency-yuan.svg
@@ -1724,6 +1783,7 @@ dental-broken.svg
 dental-off.svg
 dental.svg
 deselect.svg
+desk.svg
 details-off.svg
 details.svg
 device-airpods-case.svg
@@ -1967,6 +2027,7 @@ dice-6.svg
 dice-filled.svg
 dice.svg
 dimensions.svg
+direction-arrows.svg
 direction-horizontal.svg
 direction-sign-filled.svg
 direction-sign-off.svg
@@ -2039,6 +2100,7 @@ droplets.svg
 dual-screen.svg
 e-passport.svg
 ear-off.svg
+ear-scan.svg
 ear.svg
 ease-in-control-point.svg
 ease-in-out-control-points.svg
@@ -2124,6 +2186,7 @@ face-id.svg
 face-mask-off.svg
 face-mask.svg
 fall.svg
+favicon.svg
 feather-off.svg
 feather.svg
 fence-off.svg
@@ -2164,6 +2227,7 @@ file-lambda.svg
 file-like.svg
 file-minus.svg
 file-music.svg
+file-neutral.svg
 file-off.svg
 file-orientation.svg
 file-pencil.svg
@@ -2173,11 +2237,13 @@ file-plus.svg
 file-power.svg
 file-report.svg
 file-rss.svg
+file-sad.svg
 file-scissors.svg
 file-search.svg
 file-settings.svg
 file-shredder.svg
 file-signal.svg
+file-smile.svg
 file-spreadsheet.svg
 file-stack.svg
 file-star.svg
@@ -2289,8 +2355,10 @@ flag.svg
 flame-off.svg
 flame.svg
 flare.svg
+flask-2-filled.svg
 flask-2-off.svg
 flask-2.svg
+flask-filled.svg
 flask-off.svg
 flask.svg
 flip-flops.svg
@@ -2326,6 +2394,7 @@ folder-pause.svg
 folder-pin.svg
 folder-plus.svg
 folder-question.svg
+folder-root.svg
 folder-search.svg
 folder-share.svg
 folder-star.svg
@@ -2397,6 +2466,7 @@ ghost.svg
 gif.svg
 gift-card-filled.svg
 gift-card.svg
+gift-filled.svg
 gift-off.svg
 gift.svg
 git-branch-deleted.svg
@@ -2423,6 +2493,7 @@ golf.svg
 gps.svg
 gradienter.svg
 grain.svg
+graph-filled.svg
 graph-off.svg
 graph.svg
 grave-2.svg
@@ -2442,6 +2513,7 @@ grip-vertical.svg
 growth.svg
 guitar-pick-filled.svg
 guitar-pick.svg
+gymnastics.svg
 h-1.svg
 h-2.svg
 h-3.svg
@@ -2633,6 +2705,8 @@ home.svg
 horse-toy.svg
 horse.svg
 horseshoe.svg
+hospital-circle.svg
+hospital.svg
 hotel-service.svg
 hourglass-empty.svg
 hourglass-filled.svg
@@ -2774,6 +2848,7 @@ layout-bottombar-collapse.svg
 layout-bottombar-expand-filled.svg
 layout-bottombar-expand.svg
 layout-bottombar-filled.svg
+layout-bottombar-inactive.svg
 layout-bottombar.svg
 layout-cards.svg
 layout-collage.svg
@@ -2791,9 +2866,11 @@ layout-navbar-collapse.svg
 layout-navbar-expand-filled.svg
 layout-navbar-expand.svg
 layout-navbar-filled.svg
+layout-navbar-inactive.svg
 layout-navbar.svg
 layout-off.svg
 layout-rows.svg
+layout-sidebar-inactive.svg
 layout-sidebar-left-collapse-filled.svg
 layout-sidebar-left-collapse.svg
 layout-sidebar-left-expand-filled.svg
@@ -2802,6 +2879,7 @@ layout-sidebar-right-collapse-filled.svg
 layout-sidebar-right-collapse.svg
 layout-sidebar-right-expand-filled.svg
 layout-sidebar-right-expand.svg
+layout-sidebar-right-inactive.svg
 layout-sidebar-right.svg
 layout-sidebar.svg
 layout.svg
@@ -2868,6 +2946,10 @@ letter-y-small.svg
 letter-y.svg
 letter-z-small.svg
 letter-z.svg
+library-minus.svg
+library-photo.svg
+library-plus.svg
+library.svg
 license-off.svg
 license.svg
 lifebuoy-off.svg
@@ -2878,7 +2960,9 @@ line-dotted.svg
 line-height.svg
 line-scan.svg
 line.svg
+link-minus.svg
 link-off.svg
+link-plus.svg
 link.svg
 list-check.svg
 list-details.svg
@@ -3176,6 +3260,7 @@ message-pause.svg
 message-pin.svg
 message-plus.svg
 message-question.svg
+message-reply.svg
 message-report.svg
 message-search.svg
 message-share.svg
@@ -3187,6 +3272,9 @@ messages-off.svg
 messages.svg
 meteor-off.svg
 meteor.svg
+meter-cube.svg
+meter-square.svg
+metronome.svg
 michelin-bib-gourmand.svg
 michelin-star-green.svg
 michelin-star.svg
@@ -3232,8 +3320,10 @@ mood-happy.svg
 mood-heart.svg
 mood-kid-filled.svg
 mood-kid.svg
+mood-look-down.svg
 mood-look-left.svg
 mood-look-right.svg
+mood-look-up.svg
 mood-minus.svg
 mood-nerd.svg
 mood-nervous.svg
@@ -3242,6 +3332,7 @@ mood-neutral.svg
 mood-off.svg
 mood-pin.svg
 mood-plus.svg
+mood-puzzled.svg
 mood-sad-2.svg
 mood-sad-dizzy.svg
 mood-sad-filled.svg
@@ -3452,6 +3543,7 @@ parachute-off.svg
 parachute.svg
 parentheses-off.svg
 parentheses.svg
+parking-circle.svg
 parking-off.svg
 parking.svg
 password-fingerprint.svg
@@ -3461,6 +3553,7 @@ password.svg
 paw-filled.svg
 paw-off.svg
 paw.svg
+paywall.svg
 pdf.svg
 peace.svg
 pencil-bolt.svg
@@ -3569,11 +3662,15 @@ picture-in-picture.svg
 pig-money.svg
 pig-off.svg
 pig.svg
+pilcrow-left.svg
+pilcrow-right.svg
 pilcrow.svg
 pill-off.svg
 pill.svg
 pills.svg
+pin-end.svg
 pin-filled.svg
+pin-invoke.svg
 pin.svg
 ping-pong.svg
 pinned-filled.svg
@@ -3695,6 +3792,7 @@ progress.svg
 prompt.svg
 propeller-off.svg
 propeller.svg
+protocol.svg
 pumpkin-scary.svg
 puzzle-2.svg
 puzzle-filled.svg
@@ -3731,9 +3829,16 @@ rating-21-plus.svg
 razor-electric.svg
 razor.svg
 receipt-2.svg
+receipt-bitcoin.svg
+receipt-dollar.svg
+receipt-euro.svg
 receipt-off.svg
+receipt-pound.svg
 receipt-refund.svg
+receipt-rupee.svg
 receipt-tax.svg
+receipt-yen.svg
+receipt-yuan.svg
 receipt.svg
 recharging.svg
 record-mail-off.svg
@@ -3861,6 +3966,7 @@ sailboat-off.svg
 sailboat.svg
 salad.svg
 salt.svg
+sandbox.svg
 satellite-off.svg
 satellite.svg
 sausage.svg
@@ -3889,6 +3995,7 @@ script-minus.svg
 script-plus.svg
 script-x.svg
 script.svg
+scuba-diving.svg
 scuba-mask-off.svg
 scuba-mask.svg
 sdk.svg
@@ -3901,6 +4008,7 @@ seeding.svg
 select-all.svg
 select.svg
 selector.svg
+send-2.svg
 send-off.svg
 send.svg
 seo.svg
@@ -4019,6 +4127,7 @@ shopping-cart-star.svg
 shopping-cart-up.svg
 shopping-cart-x.svg
 shopping-cart.svg
+shovel-pitchforks.svg
 shovel.svg
 shredder.svg
 sign-left-filled.svg
@@ -4043,6 +4152,8 @@ sitemap.svg
 skateboard-off.svg
 skateboard.svg
 skateboarding.svg
+skew-x.svg
+skew-y.svg
 skull.svg
 slash.svg
 slashes.svg
@@ -4053,6 +4164,7 @@ smart-home-off.svg
 smart-home.svg
 smoking-no.svg
 smoking.svg
+snowboarding.svg
 snowflake-off.svg
 snowflake.svg
 snowman.svg
@@ -4205,6 +4317,7 @@ square-number-7.svg
 square-number-8.svg
 square-number-9.svg
 square-off.svg
+square-percentage.svg
 square-plus-2.svg
 square-plus.svg
 square-root-2.svg
@@ -4290,6 +4403,7 @@ square-rounded-number-8-filled.svg
 square-rounded-number-8.svg
 square-rounded-number-9-filled.svg
 square-rounded-number-9.svg
+square-rounded-percentage.svg
 square-rounded-plus-2.svg
 square-rounded-plus-filled.svg
 square-rounded-plus.svg
@@ -4305,6 +4419,11 @@ squares-diagonal.svg
 squares-filled.svg
 stack-2.svg
 stack-3.svg
+stack-back.svg
+stack-backward.svg
+stack-forward.svg
+stack-front.svg
+stack-middle.svg
 stack-pop.svg
 stack-push.svg
 stack.svg
@@ -4328,6 +4447,7 @@ step-out.svg
 stereo-glasses.svg
 stethoscope-off.svg
 stethoscope.svg
+sticker-2.svg
 sticker.svg
 storm-off.svg
 storm.svg
@@ -4354,6 +4474,10 @@ sunset.svg
 superscript.svg
 svg.svg
 swimming.svg
+swipe-down.svg
+swipe-left.svg
+swipe-right.svg
+swipe-up.svg
 swipe.svg
 switch-2.svg
 switch-3.svg
@@ -4416,6 +4540,7 @@ text-color.svg
 text-decrease.svg
 text-direction-ltr.svg
 text-direction-rtl.svg
+text-grammar.svg
 text-increase.svg
 text-orientation.svg
 text-plus.svg
@@ -4452,6 +4577,7 @@ time-duration-60.svg
 time-duration-90.svg
 time-duration-off.svg
 timeline-event-exclamation.svg
+timeline-event-filled.svg
 timeline-event-minus.svg
 timeline-event-plus.svg
 timeline-event-text.svg
@@ -4467,6 +4593,7 @@ toml.svg
 tool.svg
 tools-kitchen-2-off.svg
 tools-kitchen-2.svg
+tools-kitchen-3.svg
 tools-kitchen-off.svg
 tools-kitchen.svg
 tools-off.svg
@@ -4498,6 +4625,13 @@ traffic-cone.svg
 traffic-lights-off.svg
 traffic-lights.svg
 train.svg
+transaction-bitcoin.svg
+transaction-dollar.svg
+transaction-euro.svg
+transaction-pound.svg
+transaction-rupee.svg
+transaction-yen.svg
+transaction-yuan.svg
 transfer-in.svg
 transfer-out.svg
 transfer-vertical.svg
@@ -4570,6 +4704,7 @@ user-dollar.svg
 user-down.svg
 user-edit.svg
 user-exclamation.svg
+user-filled.svg
 user-heart.svg
 user-hexagon.svg
 user-minus.svg
