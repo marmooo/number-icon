@@ -5,7 +5,7 @@
 ## Installation
 
 1. `gitn clone vendor/ repos.lst` (see [gitn](https://github.com/marmooo/gitn))
-2. `bash build-icon.sh`
+2. `bash build-svg.sh`
 3. `deno run --allow-read --allow-write listup.js`
 
 ## Build
