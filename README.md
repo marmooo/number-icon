@@ -4,34 +4,38 @@
 
 ## Installation
 
-- install [Material Symbols](https://github.com/marella/material-symbols)
-  licensed under the
-  [Apache-2.0](https://github.com/marella/material-symbols/blob/main/LICENSE)
-- install
-  [Material Design Icons](https://github.com/marella/material-design-icons)
-  licensed under the
-  [Apache-2.0](https://github.com/marella/material-design-icons/blob/main/LICENSE)
-- install [Phosphor Icons](https://github.com/phosphor-icons/core) licensed
-  under the [MIT](https://github.com/phosphor-icons/core/blob/main/LICENSE)
-- install [Tabler Icons](https://github.com/tabler/tabler-icons) licensed under
-  the [MIT](https://github.com/tabler/tabler-icons/blob/master/LICENSE)
-- install [Bootstrap Icons](https://github.com/twbs/icons) licensed under the
-  [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)
-- install [Remix Icon](https://github.com/Remix-Design/RemixIcon) licensed under
-  the
-  [Apache-2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)
-- install [Solar Icon Set](https://github.com/480-Design/Solar-icon-set)
-  licensed under the
-  [CC-BY-4.0](https://www.figma.com/community/file/1166831539721848736)
-- install [Iconoir](https://github.com/iconoir-icons/iconoir) licensed under the
-  [MIT](https://github.com/iconoir-icons/iconoir/blob/main/LICENSE)
-- install [Majesticons](https://github.com/halfmage/majesticons) licensed under
-  the [MIT](https://github.com/halfmage/majesticons/blob/main/LICENSE)
-- install [Lucide](https://github.com/lucide-icons/lucide) licensed under the
-  [ISC](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
+1. `gitn clone vendor/ repos.lst` (see [gitn](https://github.com/marmooo/gitn))
+2. `bash build-icon.sh`
+3. `deno run --allow-read --allow-write listup.js`
 
 ## Build
 
 ```
 bash build.sh
 ```
+
+## Attribution
+
+- [Material Symbols](https://github.com/marella/material-symbols) is licensed
+  under the
+  [Apache-2.0](https://github.com/marella/material-symbols/blob/main/LICENSE)
+- [Material Design Icons](https://github.com/marella/material-design-icons) is
+  licensed under the
+  [Apache-2.0](https://github.com/marella/material-design-icons/blob/main/LICENSE)
+- [Phosphor Icons](https://github.com/phosphor-icons/core) is licensed under the
+  [MIT](https://github.com/phosphor-icons/core/blob/main/LICENSE)
+- [Tabler Icons](https://github.com/tabler/tabler-icons) is licensed under the
+  [MIT](https://github.com/tabler/tabler-icons/blob/master/LICENSE)
+- [Bootstrap Icons](https://github.com/twbs/icons) is licensed under the
+  [MIT](https://github.com/twbs/icons/blob/main/LICENSE.md)
+- [Remix Icon](https://github.com/Remix-Design/RemixIcon) is licensed under the
+  [Apache-2.0](https://github.com/Remix-Design/RemixIcon/blob/master/License)
+- [Solar Icon Set](https://github.com/480-Design/Solar-icon-set) is licensed
+  under the
+  [CC-BY-4.0](https://www.figma.com/community/file/1166831539721848736)
+- [Iconoir](https://github.com/iconoir-icons/iconoir) is licensed under the
+  [MIT](https://github.com/iconoir-icons/iconoir/blob/main/LICENSE)
+- [Majesticons](https://github.com/halfmage/majesticons) is licensed under the
+  [MIT](https://github.com/halfmage/majesticons/blob/main/LICENSE)
+- [Lucide](https://github.com/lucide-icons/lucide) is licensed under the
+  [ISC](https://github.com/lucide-icons/lucide/blob/main/LICENSE)
