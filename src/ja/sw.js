@@ -1,4 +1,4 @@
-const CACHE_NAME = "2024-01-30 09:30";
+const CACHE_NAME = "2024-02-05 10:20";
 const urlsToCache = [
   "/number-icon/",
   "/number-icon/ja/",
