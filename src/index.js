@@ -518,14 +518,6 @@ function removeSvgTagAttributes(svg) {
 function fixIconCode(svg) {
   const course = courseNode.options[courseNode.selectedIndex].value;
   switch (course) {
-    case "Solar-icon-set":
-      for (const node of svg.querySelectorAll("[fill=black]")) {
-        node.setAttribute("fill", "gray");
-      }
-      for (const node of svg.querySelectorAll("[stroke=black]")) {
-        node.setAttribute("stroke", "gray");
-      }
-      break;
     case "tabler-icons":
       svg.firstElementChild.remove();
       break;
