@@ -2,7 +2,7 @@ import { shape2path } from "https://cdn.jsdelivr.net/npm/@marmooo/shape2path@0.0
 import svgpath from "https://cdn.jsdelivr.net/npm/svgpath@2.6.0/+esm";
 
 const courseNode = document.getElementById("course");
-const audioContext = new AudioContext();
+const audioContext = new globalThis.AudioContext();
 const audioBufferCache = {};
 loadAudio("error", "/number-icon/mp3/boyon1.mp3");
 loadAudio("correct1", "/number-icon/mp3/pa1.mp3");
